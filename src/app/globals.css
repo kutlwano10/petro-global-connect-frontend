@@ -1,0 +1,69 @@
+@import "tailwindcss";
+/* app/globals.css */
+
+
+@layer base {
+  :root {
+    /* Light theme */
+    --background: 255 255 255;
+    --surface: 245 245 245;
+    --primary: 255 255 255;
+    --secondary: 245 245 245;
+    --text-primary: 0 0 0;
+    --text-secondary: 97 97 97;
+    --error: 176 0 32;
+  }
+
+  .dark {
+    /* Dark theme */
+    --background: 18 18 18;
+    --surface: 30 30 30;
+    --primary: 18 18 18;
+    --secondary: 30 30 30;
+    --text-primary: 255 255 255;
+    --text-secondary: 179 179 179;
+    --error: 207 102 121;
+  }
+
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--text-primary));
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Utility classes using CSS variables */
+@layer utilities {
+  .bg-surface {
+    background-color: rgb(var(--surface));
+  }
+  .text-primary {
+    color: rgb(var(--text-primary));
+  }
+  .text-secondary {
+    color: rgb(var(--text-secondary));
+  }
+  .bg-primary {
+    background-color: rgb(var(--primary));
+  }
+  .bg-secondary {
+    background-color: rgb(var(--secondary));
+  }
+  .text-error {
+    color: rgb(var(--error));
+  }
+  .bg-error {
+    background-color: rgb(var(--error));
+  }
+}
+
+.scroll-container {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
